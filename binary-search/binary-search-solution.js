@@ -24,18 +24,6 @@ function binarySearch (searchArray, searchElement) {
       max = mid - 1;
     }
   }
-  // not found? fuck it, return -1
+  // not found? very sad! return -1
   return -1;
 }
-
-//2. while the low is less than the high:
-
-/*
-1. sort array
-2. compare targetValue to middle value; if targetValue === middleValue, return & done!
-
-3.
-  a. if less than middle value, search left half
-  b. if greater than middle value, searh right half
-4. repeat
-*/
