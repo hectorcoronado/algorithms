@@ -11,9 +11,9 @@ Big Theta partial list of common functions in asymptotic notation, listed from s
 2. *Θ(lg n)*
 3. *Θ(n)*
 4. *Θ(n lg n)*
-5. *Θ(n^2)*
-6. *Θ(n^2​​ lg n)*
-7. *Θ(n^3)*
+5. *Θ(n²)*
+6. *Θ(n²​​ lg n)*
+7. *Θ(n³)*
 8. *Θ(2^n)*
 
 ###Constant Growth
@@ -32,7 +32,7 @@ A function is *linearithmic* if we multiply linear terms by a logarithm, they ta
 
 ###Polynomial Growth
 
-A function has *polynomial growth* if its output increases according to a polynomial expression. The way to identify polynomial functions is to find those where *n* is raised to a constant power, e.g. `2n^3` or `3n^3`.
+A function has *polynomial growth* if its output increases according to a polynomial expression. The way to identify polynomial functions is to find those where *n* is raised to a constant power, e.g. `2n³` or `3n³`.
 
 ###Exponential Growth
 

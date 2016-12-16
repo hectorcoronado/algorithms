@@ -1,7 +1,8 @@
 #Selection Sort
----
 
-An implementation of this algorithm in JavaScript:
+[Selection Sort YouTube Video](https://youtu.be/f8hXR_Hvybo)
+
+An implementation in JavaScript:
 
 ```javascript
 var swap = function(array, firstIndex, secondIndex) {
@@ -46,9 +47,9 @@ For an array with e.g. 8 elements, the loop will run:
 
 times.
 
-* Sidenote: we can figure out the sum of a series from 1...*n* with the following formula: `(n + 1)(n/2)` ... or put another way: `n^2/2 + n/2`. This is known as an **arithmetic series**
+* Sidenote: we can figure out the sum of a series from 1...*n* with the following formula: `(n + 1)(n/2)` ... or put another way: `n²/2 + n/2`. This is known as an **arithmetic series**
 
-###Asymptotic running-time for selection sort: *Θ(n^2)*
+###Asymptotic running-time for selection sort: *Θ(n²)*
 
 Total running time must account for three things:
 1. The running time for all calls to `indexOfMinimum`
@@ -59,6 +60,6 @@ There are *n* calls to `swap` and each call takes constant time, so it's *Θ(n)*
 
 The loop in `selectionSort` tests and increments the loop variable, and calls `indexOfMinimum` and `swap`, which takes constant time for each of the *n* iterations, for another *Θ(n)* time.
 
-For `indexOfMinimum`, each iteration of the loop can be described by an **arithmetic series** which evaluates to `(n+1)(n/2)`, which is equal to `n^2/2 + n/2`. In terms of big-Θ notation, we disregard the constant factor, the factor of 1/2, and the low-order term. The result is that the running time for `indexOfMinimum` is *Θ(n^2)*.
+For `indexOfMinimum`, each iteration of the loop can be described by an **arithmetic series** which evaluates to `(n+1)(n/2)`, which is equal to `n²/2 + n/2`. In terms of big-Θ notation, we disregard the constant factor, the factor of 1/2, and the low-order term. The result is that the running time for `indexOfMinimum` is *Θ(n²)*.
 
-Let's say that selection sort takes around `n^2/10^6` seconds to sort *n* values. If *n* = 100, the running time is about `100^2/10^6 = 1/100` seconds. But if *n* = 1000, it takes about `1000^2/10^6 = 1` second. If *n* = 1,000,000, sort takes `1,000,000^2/10^6 = 1,000,000` seconds, which is about 11.5 **days**. Increasing the array size by a factor of 1000 increases the running time a million times.
+Let's say that selection sort takes around `n²/10^6` seconds to sort *n* values. If *n* = 100, the running time is about `100²/10^6 = 1/100` seconds. But if *n* = 1000, it takes about `1000²/10^6 = 1` second. If *n* = 1,000,000, sort takes `1,000,000²/10^6 = 1,000,000` seconds, which is about 11.5 **days**. Increasing the array size by a factor of 1000 increases the running time a million times.
