@@ -1,6 +1,8 @@
 # Algorithms
 ----------------
 
+![Algorithms](http://i.giphy.com/eUo2LyzAqeddS.gif)
+
 A collection of coding challenge/interview problems solved in JavaScript.
 
 Big Theta partial list of common functions in asymptotic notation, listed from slowest to fastest growing:
