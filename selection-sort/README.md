@@ -1,8 +1,6 @@
 #Selection Sort
 ---
 
-![Selection Sort](http://i.giphy.com/CnISEDCp6IE6c.gif)
-
 An implementation of this algorithm in JavaScript:
 
 ```javascript
