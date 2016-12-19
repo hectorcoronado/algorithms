@@ -2,29 +2,51 @@
 Return true if the given string is a palindrome. Otherwise, return false.
 
 A palindrome is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing.
-
-Note
-You'll need to remove all non-alphanumeric characters (punctuation, spaces and symbols) and turn everything lower case in order to check for palindromes.
-
-We'll pass strings with varying formats, such as "racecar", "RaceCar", and "race CAR" among others.
-
-We'll also pass strings with special symbols, such as "2A3*3a2", "2A3 3a2", and "2_A3*3#A2".
 */
 
+// Function that works with varying string formats & removes
+// non-alphanumeric, special symbols:
 function isPalindrome(str) {
   str = str.replace(/[^0-9a-z]/gi, '').toLowerCase();
-  if ( str === ( str.split('').reverse().join('') ) ) {
+  if (str === (str.split('').reverse().join(''))) {
     return true;
-  } else {return false;}
+  } else {
+    return false;
+  }
 }
 
-isPalindrome("eye");
 
-function simplerIsPalindrome(input){
+// Function without manipulating string
+function isPalindrome(input) {
   for (var i = 0; i < input.length; i++) {
-   if (input[i] !== input[input.length-1-i]) {
-    return false;
-   }
+    if (input[i] !== input[input.length - 1 - i]) {
+      return false;
+    }
   }
   return true;
 }
+
+// Recursive w/o for-loop, super verbose version:
+var isPalindrome = function(str) {
+  if (str.length === 0 || str.length === 1) {
+    return true;
+  }
+
+  function firstCharacter(str) {
+    return str.slice(0, 1);
+  };
+
+  function lastCharacter(str) {
+    return str.slice(-1);
+  }
+
+  function middleCharacters(str) {
+    return str.slice(1, -1);
+  }
+  
+  if (firstCharacter(str) !== lastCharacter(str)) {
+    return false;
+  }
+  // recursive case
+  return isPalindrome(middleCharacters(str));
+};
