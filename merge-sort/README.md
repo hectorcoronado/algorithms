@@ -8,9 +8,9 @@ Merge Sort works on the basic principle of dividing your list into sub-lists (re
 
 There are TWO functions that work together to accomplish a Merge Sort:
 
--  A mergeSort function that takes an array, splits the array in two, and calls a merge function.  The mergeSort function **is recursive**.  
+-  A function that takes an array, splits the array in two, and calls a merge function.  
 
--  A merge function that takes two arrays as parameters, looks at the the first elements of the two lists, and assembles a resulting list based on the two lists 'zipped' together by pushing the lowest to highest valued elements. The merge function **is not recursive**.
+-  A function that takes two arrays as parameters, looks at the the first elements of the two lists, and assembles a resulting list based on the two lists 'zipped' together by pushing the lowest to highest valued elements.
 
 ### Resources
 
