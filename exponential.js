@@ -52,5 +52,4 @@ when n is NEGATIVE:
  - then x^n = 1/x^(-n),
  - and the exponent -n is positive,
  - so you can compute x^(-n) recursively and take its reciprocal
-
 */
