@@ -1,4 +1,25 @@
-// This works if the exponent n is an integer.
+// From Eloquent JavaScript:
+
+var power = function(base, exponent) {
+  var result = 1;
+  for (var count = 0; count < exponent; count++) {
+    result *= base;
+    return result;
+  }
+};
+
+// 2nd (more expensive) example from Eloquent JavaScript:
+
+function power(base, exponent) {
+  if (exponent === 0) {
+    return 1;
+  } else {
+    return base * power(base, exponent - 1);
+  }
+}
+
+
+// From Khan Academy. This works if the exponent n is an integer.
 
 var isEven = function(n) {
   return n % 2 === 0;
