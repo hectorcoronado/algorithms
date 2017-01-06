@@ -3,6 +3,16 @@ write a sum function that takes an array of numbers
 and returns the sum of these numbers
 */
 
+/* ES5 solution
+function sum(array) {
+    return array.reduce(function(a, b) {
+        return a + b;
+    }, 0);
+}
+*/
+
+// ES6 solution
+
 let sum = (array) =>
   array = array.reduce( (acc, cur ) => acc + cur, 0);
 

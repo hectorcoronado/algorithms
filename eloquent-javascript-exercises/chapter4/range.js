@@ -5,22 +5,37 @@ and returns an array containing all the numbers
 from start up to (and including) end.
 */
 
-// function range(start, end) {
-//   var result = []
-//   for (var i = start; i <= end; i++) {
-//     result.push(i);
-//   }
-//   return result;
-// }
+// ES5 solution
+function range(start, end, step) {
+  if (arguments.length < 3 && start < end) {
+  	step = 1;
+  } else if (arguments.length < 3 && start > end) {
+  	step = -1;
+  };
+  var result = [];
+
+  if (start < end) {
+	for (var i = start; i <= end; i += step) {
+    result.push(i);
+  	};
+  } else {
+  	for (var i = start; i >= end; i += step) {
+      result.push(i);
+    };
+  }
+  return result;
+}
 
 
-let range = (start, end) => {
+
+/* ES6 solution without decremental loop
+let range = (start, end, increment = 1) => {
   let result = [];
-  for (var i = start; i <= end; i++) {
+  for (var i = start; i <= end; i += increment) {
     result.push(i);
   }
-  console.log(result);
   return result;
 }
 
 range(1, 10);
+*/
