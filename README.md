@@ -5,6 +5,8 @@
 
 A collection of coding challenge/interview problems solved in JavaScript.
 
+Also: solutions to (eventually) all exercises in Eloquent JavaScript.
+
 Big Theta partial list of common functions in asymptotic notation, listed from slowest to fastest growing:
 
 1. *Θ(1)*
