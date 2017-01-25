@@ -19,7 +19,6 @@ getTempPromise('Oakland').then(function (temp) {
   console.log('Promise error: ', err);
 });
 
-Challenge Area:
 
 function addPromise (a, b) {
   return new Promise(function (resolve, reject) {

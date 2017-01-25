@@ -6,7 +6,7 @@ including all Fibonacci numbers less than or equal to maxNum.
 
 function fibonacci() {
   let fibonacciArray = new Array,
-      maxNum = 1000;
+      maxNum = 75;
 
   let a = 0,
       b = 0,
