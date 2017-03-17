@@ -5,4 +5,15 @@ Use the reduce method in combination with the concat method to “flatten” an 
 
 const arrays = [[1, 2, 3], [4, 5], [6]];
 
-arrays.reduce((a, b) => a.concat(b), [])
+console.log(arrays.reduce((a, b) => a.concat(b), []));
+
+
+// This also works:
+
+const flatten = arr => arr.reduce(
+  (acc, val) => acc.concat(
+    Array.isArray(val) ? flatten(val) : val
+  ), []
+);
+
+console.log(flatten(arrays));

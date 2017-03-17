@@ -39,3 +39,27 @@ The `apply()` method calls a function with a given `this` value and `arguments` 
 fun.apply(thisArg, [argsArray])
 ```
 In our `noisy(f)` example, if `f` takes more than one parameter, it geets only the first one. Defining more would be unwieldy, and would deprive `f` of the information in `arguments.length`. For these kinds of situations, we can use `apply()`
+
+#### **Bind**
+
+The `bind()` method, which all functions have, creates a new function that will call the original function but with some of the arguments already fixed.
+
+```javascript
+var theSet = ["Carel Haverbeke", "Maria van Brussel", "Donald Duck"];
+
+function isInSet(set, person) {
+  return set.indexOf(person.name) > -1;
+}
+
+console.log(ancestry.filter(function(person) {
+  return isInSet(theSet, person);
+}));
+// -> [{name: "maria van Brussel", ...},
+//     {name: "Carel Haverbeke", ...}]
+console.log(ancestry.filter(isInSet.bind(null, theSet)));
+// -> ...same result
+```
+
+The call to `bind` returns a function that will call `isInSet` with `theSet` as first argument, followed by any remaining arguments given to the bound function.
+
+The first argument, where the example passes `null`, is used for method calls, similar to the first argument to `apply`.
