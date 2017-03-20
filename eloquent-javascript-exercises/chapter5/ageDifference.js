@@ -2,6 +2,10 @@
 Compute the average age difference between mothers and children (the age of the mother when the child is born).
 */
 
+var ANCESTRY_FILE = require('./ancestryFile');
+
+var ancestry = JSON.parse(ANCESTRY_FILE);
+
 function average(array) {
   function plus(a, b) { return a + b; }
   return array.reduce(plus) / array.length;
