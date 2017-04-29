@@ -1,23 +1,21 @@
-let numbers = [10, 20, 30];
-let sum = 0;
+/*
+write a function that prints out:
 
+*
+**
+***
+****
 
-for (var i = 0; i < numbers.length; i++) {
-  sum += numbers[i];
+...and so on, depending on the integer arg passed to it (assume it'll always be passed an integer)
+*/
+
+function triangle(num) {
+  let str = "";
+
+  for (var i = 1; i <= num; i++) {
+    str += ("*" * i + "\n") ;
+  }
+  console.log(str);
 }
 
-
-numbers.reduce(function(sum, number) {
-  return sum + number;
-}, 0);
-
-let primaryColors = [
-  { color: 'red' },
-  { color: 'yellow' },
-  { color: 'blue' }
-];
-
-primaryColors.reduce(function(acc, primaryColor) {
-  acc.push(primaryColor.color);
-  return acc;
-}, []);
+triangle(3)
