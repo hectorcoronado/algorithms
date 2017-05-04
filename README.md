@@ -3,7 +3,7 @@
 
 ![Algorithms](http://i.giphy.com/eUo2LyzAqeddS.gif)
 
-A collection of coding challenge/interview problems solved in JavaScript.
+A collection of coding challenge/interview problems solved in JavaScript. Oftentimes a single file will declare the same function more than once (e.g. `./freeCodeCamp/fibonacci.js`); each subsequent definition is generally a more efficient version than what precedes it.
 
 Also: solutions to (eventually) all exercises in Eloquent JavaScript.
 
