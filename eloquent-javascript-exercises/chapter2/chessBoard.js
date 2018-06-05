@@ -1,5 +1,5 @@
 /*
-write a function that creates a string that represents a num X num grid,
+write a function that creates a string that represents a num * num grid,
 using "\n" to separate lines; at each position of the grid, there is either
 a space " ", or a "#" character; the characters should form a chess board
 

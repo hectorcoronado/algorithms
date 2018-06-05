@@ -47,7 +47,7 @@ For *n* = 4(2^(4) - 1 = 15).
 
 And if you can solve a problem for *n* - 1 disks in 2^(n-1) - 1 moves, then you can solve a problem for *n* disks in 2^(n) - 1 moves.
 
-1. You need 2^(n-1) - 1 to recursively solve the firs subprolem of movings disks 1 through *n* - 1,
+1. You need 2^(n-1) - 1 to recursively solve the first subproblem of moving disks 1 through *n* - 1,
 2. one move to move disk *n*,
 3. and another 2^(n-1) - 1 to recursively solve the second subproblem of moving disks 1 through *n* - 1.
 4. Adding these moves up, we get:

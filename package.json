@@ -1,0 +1,9 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "algorithmic problems, solved in JS",
+  "main": "index.js",
+  "repository": "https://github.com/hectorcoronado/algorithms.git",
+  "author": "hectorcoronado <hectorcoronado.developer@gmail.com>",
+  "license": "MIT"
+}
