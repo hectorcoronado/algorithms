@@ -39,3 +39,11 @@ A function has *polynomial growth* if its output increases according to a polyno
 ###Exponential Growth
 
 A function has *exponential growth* if its output increases according to an exponential expression. The way to identify exponential funcitons is to find those where a constant is raised to some expression involving *n*, e.g. `2^n` or `(3/2)^n`.
+
+###Debugger Steps:
+- add a `debugger` statement in a function
+- call the function manually
+- `$ node inspect index.js`
+- to continue execution of file, press 'c' then 'enter'
+- to launch a repl session, type 'repl' then 'enter'
+- to exit the repl, press Ctrl + C
