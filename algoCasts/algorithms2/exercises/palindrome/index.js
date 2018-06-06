@@ -7,6 +7,26 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+// const palindrome = str =>
+//   str === str.split('').reverse().join('')
 
-module.exports = palindrome;
+// const palindrome = str =>
+//   str === str.split('').reduce((rev, char) => char + rev, '')
+
+// const palindrome = str => {
+//   str = str.split('')
+//
+//   return str.every(el => {
+//     let i = str.indexOf(el) + 1
+//     return el === str[str.length - i]
+//   })
+// }
+
+// this isn't ideal, as it makes more checks than necessary.
+const palindrome = str => {
+  return str.split('').every((char, i) => {
+    return char === str[str.length - i - 1]
+  })
+}
+
+module.exports = palindrome
