@@ -8,6 +8,42 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {}
+// const buildCharMap = str => {
+//   const charMap = {}
+//
+//   for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
+//     charMap[char] = charMap[char] + 1 || 1
+//   }
+//
+//   return charMap
+// }
+//
+// const anagrams = (stringA, stringB) => {
+//   let aCharMap = buildCharMap(stringA)
+//   let bCharMap = buildCharMap(stringB)
+//
+//   if (Object.keys(aCharMap).length !== Object.keys(bCharMap).length) {
+//     return false
+//   }
+//
+//   for (let char in aCharMap) {
+//     if (aCharMap[char] !== bCharMap[char]) {
+//       return false
+//     }
+//   }
+//
+//   return true
+// }
 
-module.exports = anagrams;
+const removeNonLetters = str =>
+  str
+    .replace(/[^\w]/g, '')
+    .toLowerCase()
+    .split('')
+    .sort()
+    .join('')
+
+const anagrams = (stringA, stringB) =>
+  removeNonLetters(stringA) === removeNonLetters(stringB)
+
+module.exports = anagrams
