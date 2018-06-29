@@ -7,6 +7,30 @@
 //   capitalize('a lazy fox') --> 'A Lazy Fox'
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
-function capitalize(str) {}
+// const capitalize = str => {
+//   let capitalized = ''
+//   str = str.split(' ')
+//
+//   str.forEach(word => {
+//     let newWord = ''
+//     let capital = word[0].toUpperCase()
+//     let remainder = word.slice(1)
+//     newWord = newWord.concat(capital, remainder)
+//     capitalized += `${newWord} `
+//   })
+//   return capitalized.trim()
+// }
 
-module.exports = capitalize;
+const capitalize = str => {
+  let words = []
+
+  str.split(' ').forEach(word =>
+    words.push(word[0].toUpperCase() + word.slice(1))
+  )
+
+  return words.join(' ')
+}
+
+capitalize('a lazy fox')
+
+module.exports = capitalize
