@@ -17,6 +17,19 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+// const steps = n => {
+//   let pyramid = ''
+//
+//   for (let i = 0; i < n; i += 1) {
+//     pyramid += '#'
+//     console.log(pyramid.padEnd(n, ' '))
+//   }
+// }
 
-module.exports = steps;
+const steps = n => {
+  for (let i = 1; i <= n; i += 1) {
+    console.log('#'.repeat(i).padEnd(n, ' '))
+  }
+}
+
+module.exports = steps
