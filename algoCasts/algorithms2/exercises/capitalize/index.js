@@ -21,14 +21,38 @@
 //   return capitalized.trim()
 // }
 
+// const capitalize = str => {
+//   let words = []
+//
+//   str.split(' ').forEach(word =>
+//     words.push(word[0].toUpperCase() + word.slice(1))
+//   )
+//
+//   return words.join(' ')
+// }
+
+/**
+  * 1. create an empty string called 'result'
+  * 2. for each character in the string
+  *   - if the character to the left of the current char is a space
+  *       - capitalize it and add it to 'result'
+  *   - else
+  *       - add it to 'result'
+  */
+
 const capitalize = str => {
-  let words = []
+  let result = str[0].toUpperCase()
 
-  str.split(' ').forEach(word =>
-    words.push(word[0].toUpperCase() + word.slice(1))
-  )
+  str = str.split('')
 
-  return words.join(' ')
+  for (let i = 1; i < str.length; i += 1) {
+    if (str[i - 1] === ' ') {
+      result += str[i].toUpperCase()
+    } else {
+      result += str[i]
+    }
+  }
+  return result
 }
 
 capitalize('a lazy fox')
